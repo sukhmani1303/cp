@@ -66,16 +66,15 @@ const ld EPS = 1e-9;
 #define sz(x) ((ll)(x).size())
    
   
-void solve(){
-    ll a;
+void solve(ll t){
+    ll a = t;
     cin>>a;
-    if(a>1){
-        if(a%3<=1){
-            cout<<"yes"<<ln;
-        }
-        else cout<<"no"<<ln;
+
+    if(a%6==1 || a%6==0 || a%6 == 3){
+        cout<<"yes"<<ln;
     }
-    else cout<<"yes"<<ln;
+    else cout<<"no"<<ln;
+
 
 }
 int main()
@@ -83,8 +82,7 @@ int main()
     fast_cin();
     ll t;
     cin >> t;
-    for(int it=1;it<=t;it++) {
-        solve();
-    }
+    solve(t);
+
     return 0;
 }
